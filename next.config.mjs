@@ -2,6 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/flowledger-',
+  assetPrefix: '/flowledger-/',
   eslint: {
     ignoreDuringBuilds: true,
   },
