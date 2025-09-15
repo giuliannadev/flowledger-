@@ -14,7 +14,7 @@ export function LoginForm() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-  const { login, clearCache } = useAuth()
+  const { login } = useAuth()
   const { toast } = useToast()
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -103,22 +103,6 @@ export function LoginForm() {
                       <div>Accountant: accountant@company.com</div>
                       <div className="font-medium">Password: demo123</div>
                     </div>
-                  </div>
-                  <div className="mt-4">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      className="w-full text-gray-600 border-gray-300 hover:bg-gray-50"
-                      onClick={() => {
-                        clearCache()
-                        toast({
-                          title: "Cache cleared",
-                          description: "Please refresh the page to see the updated company name",
-                        })
-                      }}
-                    >
-                      Clear Cache & Refresh
-                    </Button>
                   </div>
         </CardContent>
       </Card>
